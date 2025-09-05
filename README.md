@@ -301,8 +301,4 @@ git push origin main
 
 ---
 
-**Happy Coding!** Built by students, for students.
-
-```
-
-Copy everything between the `````markdown` and ```
+**Happy Coding!** Built for student hustlers.
