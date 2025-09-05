@@ -1,118 +1,55 @@
-# CollegeVyapari
-
-## Project Setup
-
-1. Install dependencies:
-   ```sh
-   npm install
-   ```
-2. Start Metro bundler:
-   ```sh
-   npx react-native start
-   ```
-3. Run on Android:
-   ```sh
-   npx react-native run-android
-   ```
-
-## Notes
-
-- Make sure your Android SDK path is correct in `android/local.properties`.
-- If you see port errors, kill the process using `fuser -k 8081/tcp`.
-  This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
-
-# Getting Started
-
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
-
-## Step 1: Start Metro
-
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
-
-To start the Metro dev server, run the following command from the root of your React Native project:
-
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
+CollegeVyapari
+CollegeVyapari is a campus marketplace app built with React Native.
+It helps students buy, sell, or exchange items within their college community.
+Getting Started
+Follow these steps to run the project on your system.
+1. Install dependencies
+Copy code
+Sh
+npm install
+2. Start the Metro bundler
+Metro is the JavaScript build tool for React Native.
+Copy code
+Sh
+npx react-native start
+3. Run the app on Android
+Copy code
+Sh
+npx react-native run-android
+4. Run the app on iOS (Mac only)
+First install CocoaPods (only the first time or after updating dependencies):
+Copy code
+Sh
 bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
 bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Then run the app:
+Copy code
+Sh
+npx react-native run-ios
+Notes
+Make sure your Android SDK path is set correctly in android/local.properties.
+If you get a port already in use error:
+Copy code
+Sh
+fuser -k 8081/tcp
+You can also run the app directly using Android Studio or Xcode.
+Modify the App
+Open App.tsx in your editor.
+Save changes and the app will auto-refresh with Fast Refresh.
+Reloading manually
+Android → press R twice or open Dev Menu (Ctrl+M / Cmd+M).
+iOS → press R in the iOS Simulator.
+Tech Stack
+React Native
+TypeScript
+Metro Bundler
+Android/iOS Emulator
+Troubleshooting
+If you face issues, check the React Native Troubleshooting guide.
+Learn More
+React Native Docs
+Learn the Basics
+Integration with existing apps
+React Native Blog
+Congratulations
+You’ve set up and run CollegeVyapari successfully.
