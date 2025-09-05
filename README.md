@@ -1,317 +1,308 @@
 # CollegeVyapari
 
-A React Native mobile app for college students to connect, collaborate, and help each other with academic tasks, deliveries, and campus services.
+A React Native mobile app for college students to connect, collaborate, and help each other.
 
-## What is CollegeVyapari?
+## Project Setup
 
-CollegeVyapari is a peer-to-peer platform designed specifically for college students. Whether you need help with assignments, want someone to deliver food from the mess, or looking for study partners - this app connects you with fellow students who can help!
+1. Clone the repository:
 
-Key Features:
-- Academic Help - Get assistance with assignments and projects
-- Campus Delivery - Food delivery, book sharing, and more
-- Task Management - Post and manage your requests easily
-- Budget-friendly - Set your own prices for services
-- Rating System - Build trust through community ratings
+```
+
+git clone https://github.com/rsreehari/collegeVyapari.git
+
+cd collegeVyapari
+
+```
+
+2. Install dependencies:
+
+```
+
+npm install
+
+```
+
+3. Start Metro bundler:
+
+```
+
+npx react-native start
+
+```
+
+4. Run on Android:
+
+```
+
+npx react-native run-android
+
+```
+
+## Notes
+
+- Make sure your Android SDK path is correct in `android/local.properties`.
+
+- If you see port errors, kill the process using `fuser -k 8081/tcp`.
+
+- For Windows users, use `netstat -ano | findstr :8081` then `taskkill /PID <PID> /F`.
+
+This is a new [**React Native**](https://reactnative.dev) project for college students,
+
+# Getting Started
+
+> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative
 
 ## Prerequisites
 
-Before you start, make sure you have these installed on your computer:
+Before starting, ensure you have:
 
-### For Windows Users:
-1. **Node.js** (v18 or higher) - https://nodejs.org/
-2. **Android Studio** - https://developer.android.com/studio
-3. **Git** - https://git-scm.com/
+- **Node.js** (v18 or higher) - [Download](https://nodejs.org/)
 
-### For Mac Users:
-1. **Node.js** (v18 or higher) - https://nodejs.org/
-2. **Xcode** (for iOS development) - Install from App Store
-3. **Android Studio** (for Android development) - https://developer.android.com/studio
-4. **Git** - https://git-scm.com/
+- **Android Studio** with Android SDK - [Download](https://developer.android.com/studio)
 
-**Detailed Setup Guide**: Follow the official React Native Environment Setup guide for your operating system:
-https://reactnative.dev/docs/set-up-your-environment
+- **Git** for version control - [Download](https://git-scm.com/)
 
-## Installation & Setup
+- **VS Code** or your preferred editor
 
-### Step 1: Clone the Repository
-git clone https://github.com/rsreehari/collegeVyapari.git
-cd collegeVyapari
+## Step 1: Start Metro
 
-text
+First, you will need to run **Metro**, the JavaScript build tool for React Native.
 
-### Step 2: Install Dependencies
-npm install
+To start the Metro dev server, run the following command from the root of your React Native
 
-text
+```
 
-### Step 3: Android Setup (Required for Android development)
+# Using npm
 
-1. **Configure Android SDK path** in `android/local.properties`:
-sdk.dir=C:\Users\YourUsername\AppData\Local\Android\Sdk
-
-text
-
-2. **Start an Android emulator** or connect your physical device with USB debugging enabled
-
-### Step 4: iOS Setup (Mac only)
-cd ios
-bundle install
-bundle exec pod install
-cd ..
-
-text
-
-## Running the App
-
-### Method 1: Using npm (Recommended for beginners)
-
-1. **Start the Metro bundler** (keep this running):
 npm start
 
-text
+# OR using Yarn
 
-2. **Open a new terminal** and run the app:
+yarn start
 
-**For Android:**
+```
+
+## Step 2: Build and run your app
+
+With Metro running, open a new terminal window/pane from the root of your React Native 
+
+### Android
+
+```
+
+# Using npm
+
 npm run android
 
-text
+# OR using Yarn
 
-**For iOS (Mac only):**
+yarn android
+
+```
+
+### iOS
+
+For iOS, remember to install CocoaPods dependencies (this only needs to be run on first command)
+
+```
+
+bundle install
+
+bundle exec pod install
+
+```
+
+```
+
+# Using npm
+
 npm run ios
 
-text
+# OR using Yarn
 
-### Method 2: Using React Native CLI
+yarn ios
 
-1. **Start Metro bundler**:
-npx react-native start
+```
 
-text
+## Step 3: Configure Android SDK
 
-2. **Run the app** (in a new terminal):
-For Android
-npx react-native run-android
+Configure your Android SDK path in `android/local.properties`:
 
-For iOS (Mac only)
-npx react-native run-ios
+```
 
-text
+sdk.dir=C:\\Users\\YourUsername\\AppData\\Local\\Android\\Sdk
 
-## Development Workflow
+```
 
-### Making Changes
-1. Open the project in **VS Code** or your preferred editor
-2. Edit files in the `src/` directory
-3. Save your changes - the app will **automatically reload** thanks to Fast Refresh!
+## Step 4: Modify your app
 
-### Manual Reload (if needed)
-- **Android**: Press `R` twice or `Ctrl+M` (Windows) / `Cmd+M` (Mac) to open Dev Menu
-- **iOS**: Press `R` in the iOS Simulator
+Now that you have successfully run the app, let's make changes!
+Open files in `src/screens/` or `src/components/` and make changes. The app will automatic
 
-### Project Structure
-collegeVyapari/
-├── src/
-│ ├── components/ # Reusable UI components
-│ ├── screens/ # App screens (Home, Profile, Tasks, etc.)
-│ ├── navigation/ # Navigation setup
-│ └── utils/ # Helper functions
-├── android/ # Android-specific code
-├── ios/ # iOS-specific code (Mac only)
-└── package.json # Dependencies and scripts
+### Manual Reload
 
-text
+- **Android**: Press <kbd>R</kbd> key twice or <kbd>Ctrl</kbd> + <kbd>M</kbd> for Dev Men
 
-## Common Issues & Solutions
-
-### Port Already in Use
-Kill the process using port 8081
-fuser -k 8081/tcp
-
-Or on Windows
-netstat -ano | findstr :8081
-taskkill /PID <PID_NUMBER> /F
-
-text
-
-### Metro Bundler Won't Start
-Clear Metro cache
-npx react-native start --reset-cache
-
-text
-
-### Android Emulator Issues
-Restart ADB
-adb kill-server
-adb start-server
-
-Check connected devices
-adb devices
-
-text
-
-### Build Errors
-Clean build
-cd android
-./gradlew clean
-cd ..
-
-Rebuild
-npm run android
-
-text
-
-### Node Modules Issues
-Delete node_modules and reinstall
-rm -rf node_modules
-npm install
-
-text
-
-### Git Issues
-Fix common Git commit message errors
-git commit -m "your commit message" # Note: no space between - and m
-
-Push changes
-git add .
-git commit -m "your message"
-git push origin your-branch-name
-
-text
-
-### React Native CLI vs npm scripts
-These are equivalent:
-npm run android # Same as: npx react-native run-android
-npm run ios # Same as: npx react-native run-ios
-npm start # Same as: npx react-native start
-
-text
+- **iOS**: Press <kbd>R</kbd> in iOS Simulator
 
 ## Testing on Physical Device
 
-### Android Device:
-1. Enable **Developer Options** in Settings
-2. Turn on **USB Debugging**
-3. Connect device via USB
-4. Run `adb devices` to verify connection
-5. Run `npm run android`
+### Android Device
 
-### iOS Device (Mac only):
-1. Connect device via USB
-2. Open Xcode and sign the app with your Apple ID
-3. Trust the developer certificate on your device
-4. Run `npm run ios`
+```
 
-## Quick Start Commands (Copy & Paste)
+# Enable Developer Options and USB Debugging on your phone
 
-### First Time Setup:
-git clone https://github.com/rsreehari/collegeVyapari.git
-cd collegeVyapari
-npm install
+# Connect via USB, then verify:
 
-text
+adb devices
 
-### Daily Development:
-Terminal 1 - Start Metro
-npm start
+# Run the app:
 
-Terminal 2 - Run app
 npm run android
 
-OR
+```
+
+### iOS Device (Mac only)
+
+```
+
+# Connect device, sign in Xcode, then:
+
 npm run ios
 
-text
+```
 
-### When Things Break:
-Clear everything and restart
-rm -rf node_modules
-npm install
+# Troubleshooting
+
+## Common Issues
+
+### Port Already in Use
+
+```
+
+# Kill process on port 8081
+
+fuser -k 8081/tcp
+
+# Windows:
+
+netstat -ano | findstr :8081
+
+taskkill /PID <PID_NUMBER> /F
+
+```
+
+### Metro Bundler Issues
+
+```
+
+# Clear cache
+
 npx react-native start --reset-cache
 
-text
+```
 
-### Git Workflow:
+### Android Problems
+
+```
+
+# Restart ADB
+
+adb kill-server
+
+adb start-server
+
+adb devices
+
+```
+
+### Build Errors
+
+```
+
+# Clean build
+
+cd android
+
+./gradlew cleancd ..
+
+npm run android
+
+```
+
+### Node Modules Issues
+
+```
+
+# Reinstall dependencies
+
+rm -rf node_modules
+
+npm install
+
+```
+
+### Git Issues
+
+```
+
+# Correct commit syntax (no space between - and m)
+
+git commit -m "your message"
+
+```
+
+## Quick Commands
+
+```
+
+# Daily workflow
+
+npm start # Terminal 1
+
+npm run android # Terminal 2
+
+# When broken
+
+rm -rf node_modules && npm install
+
+npx react-native start --reset-cache
+
+# Git workflow
+
 git add .
-git commit -m "describe your changes"
+
+git commit -m "describe changes"
+
 git push origin main
 
-text
+```
 
-## Learning Resources
+# Learn More
 
-### React Native Basics:
-- **Official Docs**: https://reactnative.dev/docs/getting-started
-- **Tutorial**: https://reactnative.dev/docs/tutorial
-- **Components**: https://reactnative.dev/docs/components-and-apis
+- [React Native Website](https://reactnative.dev)
 
-### JavaScript & React:
-- **JavaScript Guide**: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
-- **React Docs**: https://react.dev/
-- **React Hooks**: https://react.dev/reference/react
+- [Getting Started](https://reactnative.dev/docs/environment-setup)
 
-### Debugging:
-- **React Native Debugger**: https://github.com/jhen0409/react-native-debugger
-- **Flipper**: https://fbflipper.com/
-- **Console Logs**: Use `console.log()` in your code to debug
+- [Components Reference](https://reactnative.dev/docs/components-and-apis)
 
-## Contributing
+- [Troubleshooting Guide](https://reactnative.dev/docs/troubleshooting)
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## CollegeVyapari Features
 
-## Support
+- **Task Management** - Post and manage academic tasks
 
-If you encounter any issues or have questions:
+- **Campus Delivery** - Food delivery and item sharing
 
-1. Check the **Common Issues** section above
-2. Visit the [React Native Troubleshooting Guide](https://reactnative.dev/docs/troubleshooting)
-3. Create an issue in this repository
-4. Join the [React Native Community](https://reactnative.dev/help)
+- **Rating System** - Community trust building
 
-## Useful Tips for Beginners
-
-### Development Environment:
-- Use **VS Code** with React Native extensions
-- Keep **Android Studio** open for emulator management
-- Use **Git Bash** or **PowerShell** for Windows
-
-### Code Organization:
-- Keep components small and reusable
-- Use meaningful variable and function names
-- Comment your code for future reference
-
-### Testing:
-- Test on both Android and iOS if possible
-- Use physical devices for better performance testing
-- Test on different screen sizes
-
-### Performance:
-- Use `console.log()` sparingly in production
-- Optimize images and assets
-- Use FlatList for long lists instead of ScrollView
-
-## Common File Locations
-
-Important files you'll work with:
-├── App.tsx # Main app entry point
-├── src/screens/ # Your app screens
-├── src/components/ # Reusable components
-├── android/local.properties # Android SDK path
-├── package.json # Dependencies
-└── README.md # This file
-
-text
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+- **Category Filters** - Academic, Delivery, Events, etc.
 
 ---
 
-**Happy Coding!** This app is built by students, for students. Let's make college life easier together.
+**Happy Coding!** Built by students, for students.
 
-**Need help?** Don't hesitate to ask questions or create issues in this repository. We're all learning together!
+```
+
+Copy everything between the `````markdown` and ```
